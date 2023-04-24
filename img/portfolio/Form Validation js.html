@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        background: pink;
+      }
+      .form-box {
+        width: 500px;
+        font-family: arial, sans;
+        background: whitesmoke;
+        margin: 50px auto;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+      }
+      .heading {
+        display: block;
+        font-size: 18px;
+        margin: -30px -30px 30px -30px;
+        font-family: sans-serif;
+        font-weight: 100;
+        padding: 20px;
+        background: rgb(58, 65, 58);
+        color: brown;
+      }
+      .input-field {
+        width: 100%;
+        height: 45px;
+        background: inherit;
+        margin-bottom: 10px;
+        outline: none;
+        padding: 7px;
+        font: 16px arial, Helvetica, sans-serif;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        box-sizing: border-box;
+      }
+      .btn {
+        padding: 8px 18px;
+        box-shadow: inset 0px 1px 0px 0px #45d6d6;
+        background: peru;
+        border: 1px solid #27a0a0;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background: #34caca;
+      }
+
+      span {
+        font-family: candara;
+      }
+      ul {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      li {
+        font-family: candara;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-box">
+      <h2 class="heading">REGISTRATION FORM</h2>
+      <form name="sign-up" id="sign-up">
+        <input
+          type="text"
+          name="fullname"
+          class="input-field"
+          placeholder="Full Name"
+          required="required"
+        />
+        <input
+          type="email"
+          name="email"
+          class="input-field"
+          id="email"
+          placeholder="Email"
+          required="required"
+          onblur="email_check()"
+        />
+        <span id="email-notice"></span>
+        <input
+          type="number"
+          name="number"
+          class="input-field"
+          id="number"
+          placeholder="Mobile Number"
+          required="required"
+        />
+        <span id="number-notice"></span>
+        <input
+          type="password"
+          name="password"
+          class="input-field"
+          id="password"
+          placeholder="Password"
+          required="required"
+        />
+        <span id="password-noticed"></span>
+
+        <ul>
+          <li>Must be at least 8 characters long</li>
+          <li>Must contain a lowercase letter</li>
+          <li>Must contain an uppercase letter</li>
+          <li>Must contain a number or special character</li>
+        </ul>
+
+        <br />
+        <br />
+        <input type="button" value="SIGN Up" class="btn" />
+        <br />
+        <span id="form-notice"></span>
+      </form>
+    </div>
+  </body>
+  <script>
+    function email_check() {
+      var email = document.getElementById("email").value;
+      var email_notice = document.getElementById("email-notice");
+      if (email.match("@")) {
+        for (var i = 0; i < email.length; i++) {
+          if (email.charAt(i) == "a") {
+            break;
+          }
+        }
+        if (i > 0) {
+          if (email.match("@gmail.com")) {
+            email_notice.innerHTML = "Your Email is valid";
+            email_notice.style.color = "green";
+          } else if (email.match("@gmail.co")) {
+            email_notice.innerHTML = "Your Email is valid";
+            email_notice.style.color = "green";
+          } else {
+            email_notice.innerHTML = "Your Email is not Valid";
+            email_notice.style.color = "red";
+          }
+        } else {
+          email_notice.innerHTML = "@ Before any text";
+          email_notice.style.color = "red";
+        }
+      } else {
+        email_notice.innerHTML = "@ is Messing";
+        email_notice.style.color = "red";
+      }
+    }
+  </script>
+</html>

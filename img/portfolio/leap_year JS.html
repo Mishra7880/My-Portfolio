@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year</title>
+    <style>
+        body {
+            background-color: greenyellow;
+        }
+
+        * {
+            font-family: sans-serif;
+        }
+
+        input[type=text] {
+            height: 40px;
+            width: 700px;
+            font-size: 25px;
+            color: black;
+        }
+
+        h1 {
+            margin-top: 100px;
+            font-size: 45px;
+        }
+
+        button {
+            font-size: 25px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 35px;
+            border: 5px solid black;
+            height: 40px;
+            width: 500px;
+            border-radius: 10px;
+            color: navy;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Leap Year and Normal Year</h1>
+        <input type="text" id="number" placeholder="Enter Year"><br><br>
+        <button onclick="demo()">Click Here</button><br><br>
+        <h2 id="result"></h2>
+    </center>
+</body>
+<script>
+    function demo() {
+        var year = document.getElementById('number').value
+        var final = document.getElementById('result')
+
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            final.innerHTML = 'This is a Leap Year'
+        }
+        else {
+            final.innerHTML = 'This is a Normal Year'
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{width: 700px;
+              height: 1150px;
+             
+              margin-left: 30%;
+              background-color: skyblue;}
+        
+        
+        p{text-align: center;
+           font-weight: bold;
+           font-size: 30px;}
+           label{margin-left: 10px;
+           
+                }
+        input[type=text]{width: 650px;
+                         height: 30px;
+                         margin-left: 10px;
+                        }
+        
+                        input[type=tel]{width: 650px;
+                         height: 30px;
+                         margin-left: 1px;
+                         margin-top: 10px;
+                        }
+        
+        textarea{margin-left: 10px;
+                 margin-top: 10px;}
+        .first{margin: 15px;}
+        
+        input[type=submit]{
+           text-align: center;
+            background-color: green;
+            width: 630px;
+            height: 32px;
+            border: none;
+            color: white;
+            font-size: 22px;
+            margin-top: 5px;
+        }</style>
+  
+</head>
+<body>
+    <div class="main">
+        <P>Student Registration Form</P>
+        <hr>
+        <div class="first">
+        <label name="name">First Name</label>
+        <input type="text" placeholder="Firstname"></div>
+
+        <div class="first">
+        <label name="name">Middle Name</label>
+        <input type="text" placeholder="Firstname"></div>
+
+        <div class="first">
+        <label name="name">Last Name</label>
+        <input type="text" placeholder="Firstname"></div>
+
+        <div class="first">
+            <label name="gender">Course:
+                <select>
+                    <option>Course</option>
+                    <option>Course</option>
+                    <option>Course</option>
+                </select>
+            </label>
+        </div>
+        <div class="first">
+            <div><label>Gender:</label></div>
+            <input type="radio" name="gender">Male
+            <input type="radio" name="gender">FeMale
+            <input type="radio" name="gender">Other
+        </div>
+
+        <div class="first">
+            <label>Phone:</label>
+            <input type="text" placeholder="+91" maxlength="10">
+        </div>
+
+        <div class="first">
+            <label>      </label>
+            <input type="tel" placeholder="phone no." maxlength="10">
+        </div>
+
+        <div class="first">
+           <div > <label>Current Address:</label></div>
+            <textarea  rows="10" cols="80" placeholder="Current Address:" ></textarea>
+        </div>
+
+        <div class="first">
+            <label >Email</label>
+            <input type="text" placeholder="Enter Email">
+        </div>
+
+        <div class="first">
+            <label >Password</label>
+            <input type="text" placeholder="Enter Password">
+        </div>
+
+        <div class="first">
+            <label >Re-type Password</label>
+            <input type="text" placeholder="Retype Password">
+        </div>
+        <div class="first">
+            <label >Captcha</label>
+            <img src="./captcha.png" height="50px" width="120px">
+            <input type="text" placeholder="Captcha">
+        <div class="first">
+            <label></label>
+            <input type="submit" value="Register">
+        </div>
+    </div>
+</body>
+</html>
